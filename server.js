@@ -23,7 +23,7 @@ let BodyParser = require("body-parser");
 let config = require("./config.json"); // Stores configurations, such as login cookie
 config.user_cookie = process.env.userCookie
 
-console.log(roblox);
+// console.log(roblox);
 
 // Modules
 
@@ -108,7 +108,7 @@ app.use((err, req, res, next) => {
 });
 
 async function login() {
-    await roblox.cookieLogin(config.user_cookie); // thanks for ruining logins roblox
+    await roblox.setCookie(config.user_cookie); // thanks for ruining logins roblox
     return await roblox.getCurrentUser();
 }
 
