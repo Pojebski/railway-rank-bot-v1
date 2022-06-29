@@ -22,6 +22,7 @@ let BodyParser = require("body-parser");
 
 let config = require("./config.json"); // Stores configurations, such as login cookie
 config.user_cookie = process.env.userCookie
+config.auth_key = process.env.authKey || config.auth_key
 
 // console.log(roblox);
 
