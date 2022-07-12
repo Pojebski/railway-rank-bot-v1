@@ -57,6 +57,10 @@ app.post("/SetRank", SetRank(), Validate, function (req, res, next) {
 
     Utility.SetRank(res, Group, Target, Rank) // Use the Utility.SetRank function to set the rank
         .catch(err => {
+            console.log("immutable rank met: ");
+            console.log(Group);
+            console.log(Target);
+            console.log(Rank);
             console.log(err);
             res.status(500).send({ error: err.message })
         });
